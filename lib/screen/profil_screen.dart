@@ -46,7 +46,6 @@ class _ProfilScreenState extends State<ProfilScreen> {
     for (String country in countries) {
       String flagUrl = paysData[country][0]['flags']['png'];
       flags.add(flagUrl);
-      print("Flag of $country: $flagUrl");
     }
   }
 
@@ -70,7 +69,7 @@ class _ProfilScreenState extends State<ProfilScreen> {
       body: paysData.isEmpty
           ? FutureBuilder<void>(
               future:
-                  Future.delayed(Duration(seconds: 50)), // Delay for 10 seconds
+                  Future.delayed(Duration(seconds: 20)), // Delay for 10 seconds
               builder: (BuildContext context, AsyncSnapshot<void> snapshot) {
                 if (snapshot.connectionState == ConnectionState.waiting) {
                   return Center(
@@ -293,10 +292,12 @@ class _ProfilScreenState extends State<ProfilScreen> {
                               child: SizedBox(
                                 width: 25,
                                 height: 25,
-                                child: Image.network(
-                                  flags[0],
-                                  fit: BoxFit.cover,
-                                ),
+                                child: flags.length > 1
+                                    ? Image.network(
+                                        flags[0],
+                                        fit: BoxFit.cover,
+                                      )
+                                    : SizedBox(), // Use a placeholder if flag URL is not available
                               ),
                             ),
                           ],
@@ -375,10 +376,12 @@ class _ProfilScreenState extends State<ProfilScreen> {
                                   child: SizedBox(
                                     width: 25,
                                     height: 25,
-                                    child: Image.network(
-                                      flags[1],
-                                      fit: BoxFit.cover,
-                                    ),
+                                    child: flags.length > 1
+                                        ? Image.network(
+                                            flags[1],
+                                            fit: BoxFit.cover,
+                                          )
+                                        : SizedBox(), // Use a placeholder if flag URL is not available
                                   ),
                                 ),
                                 SizedBox(width: 22),
@@ -405,10 +408,12 @@ class _ProfilScreenState extends State<ProfilScreen> {
                                   child: SizedBox(
                                     width: 25,
                                     height: 25,
-                                    child: Image.network(
-                                      flags[3],
-                                      fit: BoxFit.cover,
-                                    ),
+                                    child: flags.length > 1
+                                        ? Image.network(
+                                            flags[3],
+                                            fit: BoxFit.cover,
+                                          )
+                                        : SizedBox(), // Use a placeholder if flag URL is not available
                                   ),
                                 ),
                                 SizedBox(width: 22),
@@ -437,10 +442,12 @@ class _ProfilScreenState extends State<ProfilScreen> {
                               child: SizedBox(
                                 width: 25,
                                 height: 25,
-                                child: Image.network(
-                                  flags[0],
-                                  fit: BoxFit.cover,
-                                ),
+                                child: flags.length > 1
+                                    ? Image.network(
+                                        flags[0],
+                                        fit: BoxFit.cover,
+                                      )
+                                    : SizedBox(), // Use a placeholder if flag URL is not available
                               ),
                             ),
                             SizedBox(width: 22),
@@ -462,10 +469,12 @@ class _ProfilScreenState extends State<ProfilScreen> {
                               child: SizedBox(
                                 width: 25,
                                 height: 25,
-                                child: Image.network(
-                                  flags[2],
-                                  fit: BoxFit.cover,
-                                ),
+                                child: flags.length > 1
+                                    ? Image.network(
+                                        flags[2],
+                                        fit: BoxFit.cover,
+                                      )
+                                    : SizedBox(), // Use a placeholder if flag URL is not available
                               ),
                             ),
                             SizedBox(width: 22),

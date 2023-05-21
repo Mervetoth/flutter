@@ -109,7 +109,6 @@ class _TabBarScreenState extends State<TabBarScreen> {
     http.get(Uri.parse(url)).then((resp) {
       setState(() {
         this.meteoData = json.decode(resp.body);
-        print(meteoData);
       });
     }).catchError((err) {
       print(err);
