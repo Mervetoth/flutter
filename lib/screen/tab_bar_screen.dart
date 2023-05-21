@@ -134,7 +134,7 @@ class _TabBarScreenState extends State<TabBarScreen> {
             Row(
               children: [
                 Text(
-                  "${cityName}",
+                  "${cityName} ",
                   style: TextStyle(
                     fontSize: 16,
                     fontFamily: 'Hubbali',
