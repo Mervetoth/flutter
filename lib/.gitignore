@@ -1,0 +1,22 @@
+# Flutter/Dart specific
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+build/
+ios/Pods/
+ios/Podfile.lock
+android/.gradle/
+android/build/
+android/gradle/
+*.iml
+
+# IDE/Editor specific
+.vscode/
+.idea/
+*.swp
+
+# Other
+.DS_Store
+Thumbs.db
