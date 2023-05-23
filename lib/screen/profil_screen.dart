@@ -29,7 +29,7 @@ class _ProfilScreenState extends State<ProfilScreen> {
   @override
   void initState() {
     super.initState();
-    List<String> countries = ['Tunisia', 'France', 'Spain', 'usa'];
+    List<String> countries = ['TN', 'FR', 'ES', 'US'];
     getCountriesData(countries);
   }
 
@@ -44,19 +44,24 @@ class _ProfilScreenState extends State<ProfilScreen> {
 
     // Process the flags URLs in the same order as countries
     for (String country in countries) {
-      String flagUrl = paysData[country][0]['flags']['png'];
+      String flagUrl = paysData[country];
+
       flags.add(flagUrl);
+      //print(flags.length);
     }
   }
 
   Future<void> getPaysData(String keyword) async {
-    String url = "https://restcountries.com/v2/name/$keyword";
+    String url = "https://flagsapi.com/$keyword/shiny/64.png";
+
+    print(url);
 
     try {
       var response = await http.get(Uri.parse(url));
 
       setState(() {
-        paysData[keyword] = jsonDecode(utf8.decode(response.bodyBytes));
+        paysData[keyword] = url;
+        print(paysData);
       });
     } catch (err) {
       print(err);
