@@ -72,24 +72,12 @@ class _ProfilScreenState extends State<ProfilScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: paysData.isEmpty
-          ? FutureBuilder<void>(
-              future:
-                  Future.delayed(Duration(seconds: 20)), // Delay for 10 seconds
-              builder: (BuildContext context, AsyncSnapshot<void> snapshot) {
-                if (snapshot.connectionState == ConnectionState.waiting) {
-                  return Center(
-                    child: Lottie.asset(
-                      'assets/animations/loadingf.json',
-                      width: 200,
-                      height: 200,
-                    ),
-                  );
-                } else {
-                  return Center(
-                    child: Text('No data available'),
-                  );
-                }
-              },
+          ? Center(
+              child: Lottie.asset(
+                'assets/animations/loadingf.json',
+                width: 200,
+                height: 200,
+              ),
             )
           : Container(
               padding: EdgeInsets.all(10),

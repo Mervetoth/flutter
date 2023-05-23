@@ -49,18 +49,21 @@ class _CardExpState extends State<CardExp> {
                           children: <Widget>[
                             Icon(
                               Icons.domain,
-                              color: Theme.of(context).textTheme.caption!.color,
+                              color:
+                                  Theme.of(context).textTheme.bodyText1!.color,
                             ),
                             SizedBox(
                               width: 10,
                             ),
                             Text(
                               "SIFAST",
-                              style:
-                                  Theme.of(context).textTheme.caption!.copyWith(
-                                        fontSize: 25,
-                                        fontFamily: 'MavenPro',
-                                      ),
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodyText1!
+                                  .copyWith(
+                                    fontSize: 25,
+                                    fontFamily: 'MavenPro',
+                                  ),
                             ),
                           ],
                         ),
@@ -183,18 +186,21 @@ class _CardExpState extends State<CardExp> {
                           children: <Widget>[
                             Icon(
                               Icons.domain,
-                              color: Theme.of(context).textTheme.caption!.color,
+                              color:
+                                  Theme.of(context).textTheme.bodyText1!.color,
                             ),
                             SizedBox(
                               width: 10,
                             ),
                             Text(
                               "MTD GROUP",
-                              style:
-                                  Theme.of(context).textTheme.caption!.copyWith(
-                                        fontSize: 25,
-                                        fontFamily: 'MavenPro',
-                                      ),
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodyText1!
+                                  .copyWith(
+                                    fontSize: 25,
+                                    fontFamily: 'MavenPro',
+                                  ),
                             ),
                           ],
                         ),

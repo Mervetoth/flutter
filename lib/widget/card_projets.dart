@@ -49,18 +49,21 @@ class _CardProjetState extends State<CardProjet> {
                           children: <Widget>[
                             Icon(
                               Icons.domain,
-                              color: Theme.of(context).textTheme.caption!.color,
+                              color:
+                                  Theme.of(context).textTheme.bodyText1!.color,
                             ),
                             SizedBox(
                               width: 10,
                             ),
                             Text(
                               "FLUTTER",
-                              style:
-                                  Theme.of(context).textTheme.caption!.copyWith(
-                                        fontSize: 25,
-                                        fontFamily: 'MavenPro',
-                                      ),
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodyText1!
+                                  .copyWith(
+                                    fontSize: 25,
+                                    fontFamily: 'MavenPro',
+                                  ),
                             ),
                           ],
                         ),
@@ -125,18 +128,21 @@ class _CardProjetState extends State<CardProjet> {
                           children: <Widget>[
                             Icon(
                               Icons.domain,
-                              color: Theme.of(context).textTheme.caption!.color,
+                              color:
+                                  Theme.of(context).textTheme.bodyText1!.color,
                             ),
                             SizedBox(
                               width: 10,
                             ),
                             Text(
                               "WORPRESS",
-                              style:
-                                  Theme.of(context).textTheme.caption!.copyWith(
-                                        fontSize: 25,
-                                        fontFamily: 'MavenPro',
-                                      ),
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodyText1!
+                                  .copyWith(
+                                    fontSize: 25,
+                                    fontFamily: 'MavenPro',
+                                  ),
                             ),
                           ],
                         ),
